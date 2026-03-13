@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAZHIPENG 的个人主页</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <style>
-        /* 基础样式重置 */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
-        /* 背景渐变动画 */
         body {
             height: 100vh;
             display: flex;
@@ -25,7 +26,6 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* 玻璃质感卡片 */
         .card {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
@@ -50,9 +50,10 @@
         h1 { font-size: 2.5rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
         p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px; }
 
-        /* 按钮样式 */
+        /* 按钮样式优化：加入图标对齐 */
         .links a {
-            display: inline-block;
+            display: inline-flex; /* 使用 flex 让图标和文字对齐 */
+            align-items: center;
             text-decoration: none;
             color: #333;
             background: white;
@@ -60,13 +61,20 @@
             border-radius: 30px;
             font-weight: bold;
             transition: 0.3s;
-            margin: 5px;
+            margin: 8px;
+        }
+
+        /* 图标间距 */
+        .links a i {
+            margin-right: 10px;
+            font-size: 1.2rem;
         }
 
         .links a:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             background: #f0f0f0;
+            color: #000;
         }
     </style>
 </head>
@@ -78,8 +86,12 @@
         <p>🚀 开发者 | 终身学习者 | 正在打造我的 GitHub 空间</p>
         
         <div class="links">
-            <a href="https://github.com/MAZHIPENG001" target="_blank">GitHub</a>
-            <a href="mailto:mazhipeng2468@gmail.com">联系我</a>
+            <a href="https://github.com/MAZHIPENG001" target="_blank">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a href="mailto:mazhipeng2468@gmail.com">
+                <i class="fa-solid fa-envelope"></i> 联系我
+            </a>
         </div>
     </div>
 
